@@ -39,7 +39,10 @@ spec:
     spec:
       containers:
       - name: user
-        image: shanmukhatadisetti/user:v1 
+        image: shanmukhatadisetti/user:v1
+        envFrom:
+        - configMap:
+          name: user
 ---
 apiVersion: v1
 kind: Service
